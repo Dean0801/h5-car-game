@@ -60,7 +60,7 @@ export class CameraOrbitRig {
 
   applyDrag(dxPx: number, dyPx: number): void {
     this.yaw -= dxPx * this.sensX
-    this.pitch -= dyPx * this.sensY
+    this.pitch += dyPx * this.sensY
     this.pitch = Math.max(this.pitchMin, Math.min(this.pitchMax, this.pitch))
   }
 
